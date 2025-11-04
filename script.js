@@ -28,13 +28,17 @@ document.querySelectorAll('#nav-links a').forEach(link => {
   });
 });
 
-var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 50,
-      loop: true,
-      grabCursor: true,
-      centeredSlides: true,
-      autoplay: {
-        delay: 6000,
-        disableOnInteraction: false,
-      },
-    });
+// Scroll Reveal Animation
+  const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '20px',
+    duration: 2500,
+    delay: 200,
+    opacity: 0,
+  })
+  
+  sr.reveal(`.heading,.design,.develop,.wordpress,.lower-box,.choose-head,.categ-two,.work-box img,.standard,.hire,label,input,select,textarea,.send,.footer,.abt,.resources,.company,.more`, {interval:120,})
+
+  sr.reveal(`.home`, {origin: 'top'})
+  sr.reveal(`.mission,.categ-one,.basic`, {origin: 'left'})
+  sr.reveal(`.vision,.categ-three,.premium`, {origin: 'right'})
